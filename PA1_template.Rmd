@@ -41,8 +41,8 @@ hist(dailysteps, breaks = 6, main = "Freq of steps per day",
         stepsMean <- mean(steps, na.rm=TRUE)
         stepsMedian <- median(steps, na.rm=TRUE)
 ```
-* Mean: `{r} stepsMean`
-*Median: `r stepsMedian`
+Mean: ***`r mean(steps, na.rm=TRUE)`***
+Median: ***`r median(steps, na.rm=TRUE)`***
 
 ##What is the average daily activity pattern?
 
