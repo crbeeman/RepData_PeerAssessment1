@@ -15,32 +15,32 @@ echo=TRUE
 
 ### 1. Load the data 
 
-'''r
-        activity <- read.csv('activity.csv')
+'''{r
+        activity <- read.csv('activity.csv')}
 '''
 
 ### 2. Process the data
-'''r
+'''{r}
 data <- na.omit(activity)
 data$date <- as.Date(data$date)
 
 ##What is mean total number of steps taken per day?
 
 
-'''r
+'''{r}
 dailysteps <- tapply(data$steps, data$date, sum, na.rm=TRUE)
 '''
 
 ### 1. Make a histogram of the total number of steps taken each day
 
-'''r
+'''{r}
 hist(dailysteps, breaks = 6, main = "Freq of steps per day", 
     xlab = "Number of steps", ylab = "Frequency", col = "blue")
 '''
 
 ### 2. Calculate the mean and median
 
-'''r
+'''{r}
         stepsMean <- mean(steps, na.rm=TRUE)
         stepsMedian <- median(steps, na.rm=TRUE)
 '''
@@ -55,7 +55,7 @@ averageSteps <- tapply(data$steps, data$interval, mean, na.rm=TRUE)
 
 ### 1. time series plot
 
-'''r
+'''{r}
 AvgInterval <- aggregate(steps ~ interval, data, mean)
 AvgDailySteps <- aggregate(steps ~ date, data, mean)
 
