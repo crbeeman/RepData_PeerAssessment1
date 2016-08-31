@@ -67,7 +67,7 @@ hist(dailysteps, breaks = 6, main = "Freq of steps per day",
     xlab = "Number of steps", ylab = "Frequency", col = "blue")
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
+![plot of chunk unnamed-chunk-5](unnamed-chunk-5-1.png)
 
 ### 2. Calculate the mean and median
 
@@ -98,7 +98,7 @@ AvgDailySteps <- aggregate(steps ~ date, data, mean)
 plot(AvgInterval$interval, AvgInterval$steps, type='l', col=1, main="Average steps per Interval", xlab="Time", ylab="Average number of steps")
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png)
+![plot of chunk unnamed-chunk-8](unnamed-chunk-8-1.png)
 
 ### 2. Which 5 min interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -148,7 +148,7 @@ stepsNew <- aggregate(steps ~ date, activityNew, sum)
 hist(stepsNew$steps, main = "Histogram of steps per day (NA assigned)", xlab = "Steps per day")
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png)
+![plot of chunk unnamed-chunk-12](unnamed-chunk-12-1.png)
 
 
 ```r
@@ -194,4 +194,4 @@ plt <- ggplot(dailynewSteps, aes(interval, steps)) +
 print(plt)
 ```
 
-![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png)
+![plot of chunk unnamed-chunk-15](unnamed-chunk-15-1.png)
