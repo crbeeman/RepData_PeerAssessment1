@@ -1,30 +1,30 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
+
 # Reproducible Research: Week 2 Assignment
 
+'''{r}
 library(ggplot2)
 library(dplyr)
 library(knitr)
 
 echo=TRUE
+'''
 
 ## Loading and preprocessing the data
 
 ### 1. Load the data 
 
-'''{r
-        activity <- read.csv('activity.csv')}
+'''{r}
+        activity <- read.csv('activity.csv')
 '''
 
 ### 2. Process the data
 '''{r}
 data <- na.omit(activity)
 data$date <- as.Date(data$date)
-
-##What is mean total number of steps taken per day?
+'''
+## What is mean total number of steps taken per day?
 
 
 '''{r}
@@ -66,8 +66,8 @@ plot(AvgInterval$interval, AvgInterval$steps, type='l', col=1, main="Average ste
 
 '''{r}
 MaxInterval <- which.max(AvgInterval$steps)
-
 '''
+
 * Max steps: 'r MaxInterval'
 
 ## Imputing missing values
